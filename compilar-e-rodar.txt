@@ -1,0 +1,24 @@
+[ Regra para compilar todos os 3 algoritmos de uma vez ]
+  - make all
+
+[ Para compilar apenas um algoritmo específico ]
+  - make tsp-<algoritmo>
+  - <algoritmo> = branch-and-bound, twice-around-tree, christofides
+
+  - Ex: make tsp-branch-and-bound
+
+[ Para executar um algoritmo específico ]
+  - make run-<algoritmo> FILE_NAME=<instancia do tsp>.tsp
+
+  !!! 
+      Uma pasta chamadas "datasets/" com os dados deve estar no mesmo local onde os
+      programas estão sendo compilados.
+
+      O programa vai usar o seguindo caminho para encontrar a instância:
+      "./datasets/<instancia do tsp>.tsp"
+  !!!
+
+  - Ex: make run-twice-around-tree FILE_NAME=eil51.tsp
+
+[ Regra para remover executáveis ]
+  - make clean
